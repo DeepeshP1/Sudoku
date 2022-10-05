@@ -7,7 +7,6 @@ export function App() {
   const [Res, setRes] = useState()  
   var newPuzzle = []
 
-
   
   var arr = [];
   axios.request(options).then(function (response) {
