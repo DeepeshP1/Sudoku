@@ -6,9 +6,18 @@ export function App() {
   const [puzz, setPuzz] = useState([])
   const [Res, setRes] = useState()  
   var newPuzzle = []
-
+  
   
   var arr = [];
+   const options = {
+    method: 'GET',
+    url: 'https://sudoku-generator1.p.rapidapi.com/sudoku/generate',
+    
+    headers: {
+      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Host': 'sudoku-generator1.p.rapidapi.com'
+    }
+  };
   axios.request(options).then(function (response) {
     arr = response.data
     console.log(arr)
